@@ -1,4 +1,4 @@
-import java.util.ArrayList;
+import java.util.*;
 
 /**
  * Created by Flarebrass on 11/12/2016.
@@ -15,7 +15,7 @@ public class Drive {
         this.type = t;
         this.name = n;
         this.path = "\\" + p;
-        contains = new ArrayList();
+        contains = new ArrayList<>();
     }
 
     public  String getPath(){
@@ -26,7 +26,13 @@ public class Drive {
         return name;
     }
 
-    public ArrayList getList(){
+    public ArrayList<File> getList(){
         return contains;
     }
+
+    @Override
+    public String toString(){
+        return ("Drive name: " + name + " Drive Path: " + path);
+    }
+
 }
